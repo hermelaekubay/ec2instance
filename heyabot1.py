@@ -44,17 +44,11 @@ async def on_message(message):
         # Respond to farewells
         elif user_message.lower() == "bye":
             await message.channel.send(f"Don't leave me {username}")
-        # Respond to a lovely comment
-        elif user_message.lower() == "i love you":
-            comment = [
-                "Love does not exist. Stop being delulu!",
-                "I love you too",
-            ]
-        # Returning instance data for the last conditional statement.
+       
+        # Returning instance.
         elif user_message.lower() == "ec2 data": 
             await message.channel.send(f"Your instance data is  {ec2_metadata.instance_id} Your EC2 Data: {ec2_metadata.region}") 
 
-            await message.channel.send(random.choice(comment))
-        return
+    
 # Run the bot using the token
 client.run(token)
