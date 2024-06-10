@@ -5,8 +5,8 @@ import random
 from dotenv import load_dotenv
 from ec2_metadata import ec2_metadata
 
-#print(ec2_metadata.region)
-#print(ec2_metadata.instance_id)
+print(ec2_metadata.region)
+print(ec2_metadata.instance_id)
 
 # Creating a new instance of the Discord bot
 token = os.getenv("TOKEN")
